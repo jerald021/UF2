@@ -51,5 +51,43 @@ namespace Racionales
             textBox5.Text = division.getNumerador().ToString();
             textBox6.Text = division.getDenominador().ToString();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            int n1 = Convert.ToInt16(textBox1.Text);
+            int d1 = Convert.ToInt16(textBox2.Text);
+            int n2 = Convert.ToInt16(textBox3.Text);
+            int d2 = Convert.ToInt16(textBox4.Text);
+
+            Racional r1 = new Racional(n1, d1);
+            Racional r2 = new Racional(n2, d2);
+
+            Racional suma = r1.sumar(r2);
+
+            textBox5.Text = suma.getNumerador().ToString();
+            textBox6.Text = suma.getDenominador().ToString();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int n1 = Convert.ToInt16(textBox1.Text);
+            int d1 = Convert.ToInt16(textBox2.Text);
+            int n2 = Convert.ToInt16(textBox3.Text);
+            int d2 = Convert.ToInt16(textBox4.Text);
+
+            Racional r1 = new Racional(n1, d1);
+            Racional r2 = new Racional(n2, d2);
+
+            Racional resta = r1.restar(r2);
+
+            textBox5.Text = resta.getNumerador().ToString();
+            textBox6.Text = resta.getDenominador().ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
